@@ -1,15 +1,18 @@
+//below is the code for the dropdown other show
+
+function time() {
+    console.log('yo im working')
+    
+    var demo = document.getElementById('title'); 
+      // if (demo.value == "other"){
+      //   document.getElementsByClassName('tester')[0].classList.toggle("active");
+      // }
+      console.log(demo.value)
+    } 
 
 
-
-// below is the on click event for the delivery address
-function show1(){
-  document.getElementById('Delivery_box').style.display ='none';
-}
-function show2(){
-  document.getElementById('Delivery_box').style.display = 'block';
-}
-// below is the code for the check box
-function myFunction() {
+// below is the code for the tick box for the info 
+function gift() {
   // Get the checkbox
   var checkBox = document.getElementById("myCheck");
   // Get the output text
@@ -22,8 +25,39 @@ function myFunction() {
     text.style.display = "none";
   }
 }
+//below is the switch for the yes box and the deliverty address
+
+function show1(){
+  document.getElementById('Delivery_box').style.display ='none';
+}
+function show2(){
+  document.getElementById('Delivery_box').style.display = 'block';
+}
+
+
+
+// scrole bar target
+// below is the code for the side menu
+/* side menu animation*/ 
+function myFunction() { 
+  document.getElementById('bars').classList.toggle("change");
+  document.getElementById('by').classList.toggle("stop");
+}
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginRight = "0";
+}
 
 // below is the code used for the cookie.
+
 $(document).ready(function(){
   if (typeof(Storage) !== "undefined") {
     let tess = sessionStorage.getItem("cookie")
@@ -54,4 +88,3 @@ $(document).ready(function(){
     pauseOnDotsHover: true,
     });
   });
-
