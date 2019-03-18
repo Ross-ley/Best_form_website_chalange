@@ -1,13 +1,12 @@
 //below is the code for the dropdown other show
 
 function time() {
-    console.log('yo im working')
-    
-    var demo = document.getElementById('title'); 
-      // if (demo.value == "other"){
-      //   document.getElementsByClassName('tester')[0].classList.toggle("active");
-      // }
-      console.log(demo.value)
+    var demo = document.getElementById('tim'); 
+      if (demo.value == "other"){
+        document.getElementsByClassName('tester')[0].classList.toggle("active");
+      }else {
+        document.getElementsByClassName('tester')[0].classList.remove("active")
+      }
     } 
 
 
@@ -55,6 +54,12 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginRight = "0";
 }
+
+function openMenuFunction(){
+  myFunction();
+  openNav();
+}
+
 
 // below is the code used for the cookie.
 

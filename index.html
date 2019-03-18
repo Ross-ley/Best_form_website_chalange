@@ -180,11 +180,11 @@
                     </button>
                 </form>
                 </div>
-                <button class="hamburger hamburger--vortex is-active small" type="button">
-                    <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                    </span>
-                </button>  
+                <div id="bars" onclick="openNav(), myFunction()">  <!-- side menu target -->
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
             </header>
         </div>
         <!-- this is where the navagation bar goes -->
@@ -337,12 +337,15 @@
         <!-- this is where the body content stars -->
         <div id="main">
         <div class="container_body">
-            <div class="donations">
-                <fieldset>
-                    <legend>
-                        <h1 class="color">Donations</h1>                             
+            <div class="donations"> 
+                <legend>
+                        <h1 class="colorMain">Donations</h1>                             
                     </legend>
                     <p>Please complete the form below to make your donation by credit ot debit card.</p>
+                <fieldset>
+                    <div class="flexy">
+                    
+                   
                     <div class="uper">
                     <span>
                         <div>
@@ -392,13 +395,16 @@
                         <input type="text">
                     </span>
                 </div>
+            </div>
                 </fieldset>
             </div>
             <div class="Billing">
-                <fieldset>
-                    <legend>
+                <legend>
                             <h1 class="color">Billing address</h1> 
                     </legend>
+                <fieldset>
+                        <div class="flexy">
+                    
                     <div class="uper">
                         <span>
                            <div>
@@ -804,6 +810,7 @@
                         <input type="text">
                     </span>
                 </div>
+                </div>
                 </fieldset>
             </div>
             <div class="delivery">
@@ -822,6 +829,7 @@
                     <br>
                     <div id="higher">
                         <fieldset>
+                                <div class="flexy">
                             <div class="uper">
                                 <span>
                                     <div>
@@ -1227,35 +1235,48 @@
                                 <input type="text">
                             </span>
                         </div>
+                        </div>
                         </fieldset>
                     </div>
                 </div>
             </div>
             <div class="Payment">
-                    <fieldset>
-                        <legend>
+                <legend>
                             <h1 class="color">Payment</h1> 
                         </legend>
-                        <div class="uper">
+                    <fieldset>
+                        
+                        <div class="uper smaller">
                             <span>
+                            
                             <div>
                                 Donation amount<span class="ast">*</span> 
                             </div>
-                            <input type="text">
+                            <input type="text" class="pad">
+                            <span class="doler">£</span> 
                         </span>
-                        <span>
+                        <span class="space">
                             <div>
                                I would like to donate to <span class="ast">*</span> 
                             </div>
-                            <input type="text">
+                                <select>
+                                    <option value="" selected="selected">--- Please Select ---</option>
+                                    <option value="EDAW 2019">EDAW 2019</option>
+                                    <option value="General Donation">General Donation</option>
+                                    <option value="Celebration (birthday, wedding etc.)">Celebration (birthday, wedding etc.)</option>
+                                    <option value="Echo Project">Echo Project</option>
+                                    <option value="Event Registration">Event Registration</option>
+                                    <option value="In Memory">In Memory</option>
+                                    <option value="Schools Resources – Spot The Signs">Schools Resources – Spot The Signs</option>
+                                    <option value="I'm paying in my sponsorship money">I'm paying in my sponsorship money</option>
+                                </select>
                         </span>
                         </div>
                         
                         Details 
                         <p class="mag">Please give us any extra information about your donation. E.g I'm paying in sponsorship money. I'm paying my event registration fee.</p>
-                        <span id="resize">
-                            <input type="text" id="resize">
-                        </span>
+                        <textarea id="resize">
+                        </textarea>
                         
                     </fieldset>
             </div>
@@ -1263,9 +1284,9 @@
                     <h1 class="color">Gift Aid Your Donation</h1>
                     <p>If you are a UK taxpayer you can boot your donation by 25p for every £1 you donate. This means a donation of £20 could be worth £25 to Beat!</p>
                 <!-- check box -->
-                <label class="container">
+                <label class="container container12">
                     <input type="checkbox" onclick="gift()" id="myCheck"> Yes, I want to Gift Aid this donation and any donations I make in the future or have made in the past four years to Beat.
-                    <span class="checkmark"></span>
+                    <span class="checkmark1"></span>
                     <div id="boxbox">
                         <br>
                         <p class="coverhidtext">
@@ -1277,15 +1298,17 @@
         </label>
             <br>
             <div class="Keeping_in_touch">
-                <fieldset>
-                    <legend>
+                    <fieldset>
+                <legend>
                         <h1 class="color">Keeping in touch</h1> 
                     </legend>
-                    <span>
-                        <div class="uper">
+                
+                    
+                    <span class="inlineOther">
+                        <div class="uper wayToBig">
                             How did you hear about beat
-                        </div>
-                            <select id="title" onchange='time()'>
+                        
+                            <select id="tim" class="same" onchange='time()'>
                                 <option value="" selected="selected">--- Please Select ---</option>
                                 <option value="11">Email</option>
                                 <option value="5">Facebook</option>
@@ -1300,46 +1323,50 @@
                                 <option value="13">Word of mouth</option>
                                 <option value="other">Other (please specify)</option>
                             </select>
+                        </div>
                             <div class="tester">
-                                <p>Other Source <span class="ast">*</span></p>
+                                <p class="mag">Other Source <span class="ast">*</span></p>
                                 <input type="text">
                             </div>
                     </span>    
                     <p>We'd love to keep in touch with you to tell you about our work in the fight against eating disorders and how you can help through fundraising, campaigning and volunteering opportunities.</p>
                     <p>Please select how you's like to hear from us below:</p>
                     <!-- radio select -->
-                    <div class="uper">
-                    <label class="container"><span>Email</span>
-                        <input type="radio" name="tets" class="pretty-radio"> Yes
+                    <div>
+                    <label class="spanCheck mail">Email</label>
+                        <label class="container1">
+                        <input type="radio" name="tets" class=""> Yes
                             <span class="checkmark"></span>
                         </label>
-                        <label class="container">
-                            <input type="radio" checked="checked" name="tets" class="pretty-radio"> No
+                        <label class="container1">
+                            <input type="radio" checked="checked" name="tets" class=""> No
                             <span class="checkmark"></span>
                         </label> 
                     </div>
-                        <div class="uper">
-                            <label class="container"><span class="phone">Phone</span>
-                                <input type="radio" name="tet"class="pretty-radio">Yes
+                        <div >
+                            <label class="spanCheck">Phone</label>
+                            <label class="container1">
+                                <input type="radio" name="tet"class="">Yes
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="container">
-                                <input type="radio" checked="checked" name="tet" class="pretty-radio">No
+                            <label class="container1">
+                                <input type="radio" checked="checked" name="tet" class="">No
                                 <span class="checkmark"></span>
                             </label>
                         </div>
-                        <div class="uper">
-                            <label class="container"> <span class="text">Text</span> 
-                                <input type="radio" name="tetsz" class="pretty-radio">Yes
+                        <div >
+                            <label class="spanCheck text">Text</label>
+                                <label class="container1">
+                                <input type="radio" name="tetsz" class="">Yes
                                 <span class="checkmark"></span>
                             </label>
-                            <label class="container">
-                                <input type="radio" checked="checked" name="tetsz" class="pretty-radio">No
+                            <label class="container1">
+                                <input type="radio" checked="checked" name="tetsz" class="">No
                                 <span class="checkmark"></span>
                             </label>
                         </div>            
-                        <p>We take your privacy seriously and will never sell or swap your details with anyone. You can find out more about how we protect and use your details in our Privacy Policy. If we have your postal address, we may contact you by post unless you tell us otherwise. You can unsubscribe or change your communication preferences at any time by emailing <span>info@beateatingdisorders.org.uk</span> or calling <span>01603 753308</span>.</p>
-                        <p>Remember, you can also follow us on <a href="#" class="link">facebook</a>, <a href="#" class="link">Twitter</a> and <a href="#" class="link">Instagram</a>.</p>
+                        <p>We take your privacy seriously and will never sell or swap your details with anyone. You can find out more about how we protect and use your details in our Privacy Policy. If we have your postal address, we may contact you by post unless you tell us otherwise. You can unsubscribe or change your communication preferences at any time by emailing <a href="mailto:info@beateatingdisorders.org.uk" class="infoUnderline">info@beateatingdisorders.org.uk</a> or calling <a href="tel:01603753308" class="infoUnderline">01603 753308</a>.</p>
+                        <p>Remember, you can also follow us on <a href="https://www.facebook.com/beat.eating.disorders" class="link infoUnderline">Facebook</a>, <a href="https://twitter.com/beated" class="link infoUnderline">Twitter</a> and <a href="https://www.instagram.com/beatedsupport/?hl=en" class="link infoUnderline">Instagram</a>.</p>
                         <br>
                         <button class="btn_2">Donate <i class="fas fa-caret-right"></i> </button>
                     </fieldset>
@@ -1369,16 +1396,16 @@
                                         <li><a href="#">Contact Us</a></li>
                                     </ul>
                                     <div class="social">
-                                        <a href="#">
+                                        <a href="https://www.facebook.com/beat.eating.disorders">
                                             <i class="fab fa-facebook-f fa-2x"></i>
                                         </a>
-                                        <a href="#">
+                                        <a href="https://twitter.com/beated">
                                             <i class="fab fa-twitter fa-2x"></i>
                                         </a>
-                                        <a href="#">
-                                            <i class="fab fa-you tube fa-2x"></i>
+                                        <a href="https://www.youtube.com/user/beatingED">
+                                            <i class="fab fa-youtube fa-2x"></i>
                                         </a> 
-                                        <a href="#">
+                                        <a href="https://www.linkedin.com/company/beat---beating-eating-disorders">
                                             <i class="fab fa-linkedin-in fa-2x"></i>
                                         </a> 
                                     </div>
@@ -1398,7 +1425,7 @@
                                         <li><a href="#">privacy statement</a></li>
                                         <li><a href="#">cookie Policy</a></li>
                                         <li><a href="#">Sitemap</a></li>
-                                        <li><a href="#">Website Development by Netmatters</a></li>
+                                        <li><a href="https://www.netmatters.co.uk/">Website Development by Netmatters</a></li>
                                     </ul>
                                 </div>
                         </div>
